@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "xiaobaotong-copy",
+  "version": "0.0.1",
+  "description": "小报童复制插件",
+  "icons": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://xiaobot.net/*"
+      ],
+      "js": [
+        "js/index.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+}
