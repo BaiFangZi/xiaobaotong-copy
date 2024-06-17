@@ -8,11 +8,20 @@
 
   function enableTextSelection() {
     var elements = document.querySelectorAll('.post, .post_page, .forbidd');
+    console.log(elements);
     elements.forEach(function (element) {
       element.style.userSelect = 'text';
     });
   }
-  enableTextSelection()
+  // 未渲染完成获取不到dom，简单延时
+  setTimeout(()=>{
+    enableTextSelection()
+  },2000)
+  // window.addEventListener('load', () => {
+  //   console.log('复制插件被加载')
+  //   enableTextSelection()
+  // })
+
 
   // function createEnableButton() {
   //     var button = document.createElement('button');
